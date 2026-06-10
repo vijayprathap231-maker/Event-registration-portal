@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ticket</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎟 Event Ticket</h1>
+
+<div class="card">
+
+<p><b>Name:</b> <span id="name"></span></p>
+
+<p><b>Email:</b> <span id="email"></span></p>
+
+<p><b>College:</b> <span id="college"></span></p>
+
+<p><b>Event:</b> <span id="event"></span></p>
+
+<h2>Registration Successful ✅</h2>
+
+</div>
+
+<script>
+
+document.getElementById("name").innerHTML =
+localStorage.getItem("name");
+
+document.getElementById("email").innerHTML =
+localStorage.getItem("email");
+
+document.getElementById("college").innerHTML =
+localStorage.getItem("college");
+
+document.getElementById("event").innerHTML =
+localStorage.getItem("event");
+
+</script>
+
+</body>
+</html>
