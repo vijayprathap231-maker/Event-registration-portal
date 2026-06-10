@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<form id="form">
+
+<input type="text" id="name" placeholder="Name" required>
+
+<input type="email" id="email" placeholder="Email" required>
+
+<input type="text" id="college" placeholder="College Name" required>
+
+<button type="submit">Generate Ticket</button>
+
+</form>
+
+<script>
+
+document.getElementById("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+localStorage.setItem("name",
+document.getElementById("name").value);
+
+localStorage.setItem("email",
+document.getElementById("email").value);
+
+localStorage.setItem("college",
+document.getElementById("college").value);
+
+const params=new URLSearchParams(window.location.search);
+
+localStorage.setItem("event",
+params.get("event"));
+
+window.location.href="ticket.html";
+
+});
+
+</script>
+
+</body>
+</html>
